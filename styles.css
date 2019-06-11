@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+h2{
+    text-align: center;
+    padding: 10px;
+}
+nav{
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    bottom: 40%;
+    width: 100%;
+}
+nav a{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 7px;
+    color: white;
+    text-decoration: none;
+}
+.startup{
+    position: fixed;
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    animation: introBG 2s forwards;
+    animation-delay: 5.5s;
+    z-index: 1000000000;
+}
+.startup img{
+    width: 80vw;
+
+}
+.startup .img-container{
+    margin-bottom: 10vh;
+    /* background: orange; */
+    animation: intro 5s forwards;
+    width: 20%;
+    overflow: hidden;
+    transform: translate(100%,0) rotate(180deg);
+    opacity: 0;
+}
+@keyframes intro{
+    20%{
+        transform: translate(0,0) rotate(0);
+        opacity: 1;
+        width: 20%;
+    }
+    70%{
+        transform: translate(0,0) rotate(0);
+        opacity: 1;
+        width: 20%;
+    }
+    100%{
+        justify-content: center;
+        display: flex; 
+        transform: translate(0,0) rotate(0);
+        opacity: 1;
+        width: 80%;
+    }
+}
+@keyframes introBG{
+    to{
+        transform: translate(0,100vh);
+        opacity: 0;
+    }
+}
+header{
+    height: 65vh;
+    position: relative;
+}
+header img{
+    height: 100%;
+}
+header .image{
+    background-size: cover!important;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+header .image.one{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), 
+    url(./images/thumbnail1.jpg);
+}
+header .image.two{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), 
+    url(./images/thumbnail2.jpg);
+}
+header .image.three{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), 
+    url(./images/thumbnail3.jpg);
+}
+header .image.four{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ), 
+    url(./images/thumbnail4.jpg);
+}
+header .image.hide{
+    opacity: 0;
+}
+header .image{
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+header #logo{
+    z-index: 1000;
+    position: absolute;
+    width: 80%;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 5%;
+}
+header h2{
+    position: absolute;
+    z-index: 1000;
+    color: white;
+    bottom: 10%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 80%;
+    text-align: center;
+    border: solid 1px white;
+    padding: 10px;
+}
+header h2 i{
+    margin-right: 10px;
+}
+section{
+    margin: 20px 0;
+    padding: 20px 15px;
+}
+section p{
+    line-height: 25px;
+}
+footer{
+    height: 30vh;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+}
+
+
+#haha{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 4s;
+    z-index: 10000;
+    height: 0;
+    opacity: 0;
+}
+#haha.show{
+    height: 100vh;
+    opacity: 1;
+}
